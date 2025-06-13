@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat</title>
+  <link rel="stylesheet" href="css/chat.css" />
+  <link rel="stylesheet" href="css/chat_re.css">
+</head>
+<body>
+  <div class="chat-container">
+    
+    <aside class="chat-list">
+  <div class="chat-header">
+    <button id="tab-vendedores" class="tab-button active" onclick="mostrarSeccion('vendedores')">Vendedores</button>
+    <button id="tab-compradores" class="tab-button" onclick="mostrarSeccion('compradores')">Compradores</button>
+  </div>
+
+  
+  <div id="lista-vendedores" class="chat-list-section">
+    <div class="chat-item" onclick="cargarConversacion('usuario01')">
+      <span class="chat-user">Usuario01</span>
+      <span class="chat-producto">Producto01</span>
+      <p class="chat-preview">Buenas, quería informarle que...</p>
+    </div>
+    <div class="chat-item" onclick="cargarConversacion('usuario02')">
+      <span class="chat-user">Usuario02</span>
+      <span class="chat-producto">Producto02</span>
+      <p class="chat-preview">Hola, tengo dudas sobre el...</p>
+    </div>
+  </div>
+
+  
+  <div id="lista-compradores" class="chat-list-section hidden">
+    <div class="chat-item" onclick="cargarConversacion('comprador01')">
+      <span class="chat-user">Comprador01</span>
+      <span class="chat-producto">ProductoA</span>
+      <p class="chat-preview">¿El producto sigue disponible?</p>
+    </div>
+    <div class="chat-item" onclick="cargarConversacion('comprador02')">
+      <span class="chat-user">Comprador02</span>
+      <span class="chat-producto">ProductoB</span>
+      <p class="chat-preview">Estoy interesado en el anuncio...</p>
+    </div>
+  </div>
+</aside>
+
+    
+    <section class="chat-window">
+      <div class="chat-header" id="nombreConversacion">Selecciona una conversación</div>
+      <div class="chat-mensajes" id="mensajes">
+        
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Escribe un mensaje..." />
+        <button>Enviar</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/chat.js"></script>
+</body>
+</html>

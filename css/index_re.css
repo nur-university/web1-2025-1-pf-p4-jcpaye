@@ -1,0 +1,147 @@
+/* Base general */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout general */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Banner */
+.banner {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Categorías destacadas */
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.categoria-card {
+  flex: 1 1 30%;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.categoria-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Anuncios destacados */
+.anuncios {
+  margin-top: 30px;
+  overflow-x: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.anuncio {
+  flex: 0 0 auto;
+  width: 200px;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.anuncio img {
+  width: 100%;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #222;
+  color: white;
+  text-align: center;
+}
+
+/* Botón de chat */
+.chat-float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  background: #6200ee;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .categoria-card {
+    flex: 1 1 45%;
+  }
+
+  .anuncio {
+    width: 160px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoria-card {
+    flex: 1 1 100%;
+  }
+
+  .anuncio {
+    width: 100%;
+  }
+
+  .chat-float-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
